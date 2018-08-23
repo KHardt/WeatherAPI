@@ -3,7 +3,7 @@
     {
       "userName": "test",
       "password": "test",
-      "zipCode": "37209",
+      "zipCode": 37209,
       "id": 1
     },
     {
@@ -14,14 +14,30 @@
     {
       "userName": "test3",
       "password": "test3",
-      "zipcode": "37209",
+      "zipcode": 37209,
       "id": 3
     },
     {
       "userName": ",mn",
       "password": ",mn",
-      "zipcode": "37209",
+      "zipcode": 37209,
       "id": 4
+    },
+    {
+      "userName": "somerandom",
+      "password": "random",
+      "zipcode": "37209",
+      "id": 5
+    }
+  ],
+  "places": [
+    {
+      "city": "Nashville",
+      "zipCode": [
+        37209,
+        37011,
+        37013
+      ]
     }
   ]
 }

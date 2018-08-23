@@ -39,10 +39,9 @@ function logInUser() {
         if (user.length === 0 || userName === "") {
             alert("please try again!")
 
-        } else { //load all the users stuff
+        } else { 
             sessionActiveUser.saveActiveUser(user)
             document.getElementById("logIn").innerHTML = "";
-            //loadTaskForm();
             writeToDom()
             //weatherInfo()
 
