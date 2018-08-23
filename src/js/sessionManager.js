@@ -1,6 +1,3 @@
-//Purpose: Manage active user in session storage
-//Author:  Dejan Stjepanovic
-
 const sessionActiveUser = Object.create(null, {
 
     //get user from session storage
@@ -31,7 +28,6 @@ const sessionActiveUser = Object.create(null, {
             sessionStorage.removeItem("ActiveUser")
         }
     }
-
 
 
 })

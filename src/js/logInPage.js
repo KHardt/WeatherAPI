@@ -60,6 +60,8 @@ function regUser() {
     activateForm()
 
 }
+
+
 }
 
 
