@@ -9,3 +9,5 @@ If user exists, use details in json server.
 User details will contain today's weather.
 If today's weather exists, use it.
 If today's weather does not exist (NA or yesterday), get today's weather and save to json server.
+
+

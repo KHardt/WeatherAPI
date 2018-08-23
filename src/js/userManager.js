@@ -1,8 +1,8 @@
 const userManager = Object.create(null, {
     //get all users. etc. fetch's       MVH
     getSingleUsers: {
-        value: (userName, email) => {
-            return fetch(`http://localhost:8088/users?userName=${userName}&email=${email}`).then(r => r.json())
+        value: (userName, password) => {
+            return fetch(`http://localhost:8088/users?userName=${userName}&password=${password}`).then(r => r.json())
         }
     },
 

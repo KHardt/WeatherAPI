@@ -1,7 +1,9 @@
 const userManager = require("./userManager")
 const sessionActiveUser = require("./sessionManager")
 const writeToDom = require("./writeToDom")
-//const registration = require("./registration")
+const registration = require("./registrationForm")
+const activateForm = require("./registrationManager")
+
 
 
 function logInPage () {
@@ -14,8 +16,8 @@ document.getElementById("logIn").innerHTML = `
         <label <label for="uname"><b>Username</b></label>
         <input id="usrNameInput" type="text" placeholder="Enter Username" name="uname" required/>
 
-        <label for="email"><b>Email</b></label>
-    <input id="emailInput" type="password" placeholder="Enter Email" name="email" required/>
+        <label for="password"><b>Password</b></label>
+    <input id="passwordInput" type="password" placeholder="Enter Password" name="password" required/>
 
     <button id="logInButton">Login</button>
     <br>
@@ -31,8 +33,8 @@ document.getElementById("registerButton").addEventListener("click", regUser)
 //below is specific for loginbutton action:
 function logInUser() {
     const userName = document.getElementById("usrNameInput").value
-    const email = document.getElementById("emailInput").value
-    userManager.getSingleUsers(userName, email).then(user => {
+    const password = document.getElementById("passwordInput").value
+    userManager.getSingleUsers(userName, password).then(user => {
         //console.log(user);
         if (user.length === 0 || userName === "") {
             alert("please try again!")
@@ -55,8 +57,8 @@ function logInUser() {
 }
 //below if user clicks register
 function regUser() {
-    $("#logIn").empty()
-    document.querySelector("#logIn").innerHTML = registration.renderForm();
+    document.getElementById("logIn").innerHTML = ""
+    document.getElementById("logIn").innerHTML = registration.renderForm();
     activateForm()
 
 }

@@ -14,7 +14,7 @@ const sessionActiveUser = Object.create(null, {
             sessionStorage.setItem("ActiveUser", JSON.stringify({
                 "id": users[0].id,
                 "username": users[0].userName,
-                "email": users[0].email
+                "password": users[0].password
 
             }))
 
